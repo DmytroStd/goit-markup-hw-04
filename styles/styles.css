@@ -422,22 +422,19 @@ html {
 }
 
 .button {
+    background-color: var(--accent-bg-color);
+
+    padding: 6px 22px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
-
-    padding: 6px 22px;
-    margin-bottom: 50px;
-
-    cursor: pointer;
-    border-radius: 4px;
-    border: none;
-
-
-    /* background-color: var(--accent-bg-color);  потом добавить*/
 }
 
 .filtr-btn {
@@ -453,10 +450,19 @@ html {
 
 .button-list {
     display: inline-block;
+    border-radius: 4px;
+    margin-bottom: 50px;
 }
+
+
 
 .filtr-btn .button-list+.button-list {
     margin-left: 8px;
+}
+
+.button-list:hover {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
 .filtr-btn button:hover,
@@ -509,6 +515,10 @@ html {
 .works-pictures {
     flex-basis: calc((100% - 60px) / 3);
     display: block;
+}
+
+.project-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-item .item {
