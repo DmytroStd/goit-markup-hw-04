@@ -34,7 +34,7 @@ html {
     margin: 0 auto;
 
     /* outline: 2px solid red; */
-    /* width: 1600px; */
+    width: 1600px;
 }
 
 /* button {
@@ -59,7 +59,7 @@ html {
     /* outline: 2px solid red; */
 }
 
-.hide-title {
+.hide-head {
     display: none;
 }
 
@@ -142,6 +142,14 @@ html {
     margin-left: auto;
 }
 
+/* .link:before {
+    content: "";
+    margin-left: 10px;
+    background-image: url(../images/Vector.png);
+    background-size: contain;
+
+} */
+
 /* .site-nav .item:not(:last-child) {
     margin-right: 50px;
 }
@@ -150,17 +158,10 @@ html {
     margin-right: 50px;
 } */
 
-.site-nav .item+.item {
-    margin-left: 50px;
-}
-
+.site-nav .item+.item,
 .site-cont .item+.item {
     margin-left: 50px;
 }
-
-
-.site-nav .item,
-.site-cont .item {}
 
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -187,14 +188,38 @@ html {
     padding-bottom: 32px;
 }
 
-/* Hero */
-
-.hero {
-    /* background-color: var(--secondary-bg-color)  */
-    background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+.header-mail {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    cursor: pointer;
 }
+
+.header-icon:hover,
+.header-icon:focus {
+    fill: var(--accent-color);
+}
+
+.header-tel {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* .link-tel {
+    display: flex;
+    align-items: center;
+    text-align: center;
+} */
+
+.header-icon {
+    margin-right: 10px;
+}
+
+/* Hero */
 
 .hero-title {
     font-weight: 900;
@@ -212,6 +237,17 @@ html {
 .hero-conteiner {
     padding-top: 200px;
     padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Button main page*/
@@ -224,6 +260,7 @@ html {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: 4px;
     background-color: var(--accent-color);
+    border-radius: 4px;
 
     font-weight: 700;
     font-size: 16px;
@@ -237,21 +274,12 @@ html {
 
 
 
-.hero .btn:hover,
+.btn:hover,
 .btn:focus {
     color: var(--accent-color);
     background-color: var(--primary-bg-color);
 }
 
-/* button {
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-} */
 
 /* Section */
 
@@ -274,12 +302,19 @@ html {
     padding-bottom: 94px;
 }
 
-.feature {
-    margin-bottom: 94px;
-}
-
 .feature .item {
     width: 270px;
+}
+
+.feature-pic-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background: #F5F4FA;
+    border-radius: 4px;
 }
 
 .feature,
@@ -336,9 +371,12 @@ html {
     text-transform: uppercase;
 }
 
+.section-respons {
+    padding-bottom: 94px;
+}
+
 .team {
     justify-content: space-between;
-
     background-color: var(--accent-bg-color);
 }
 
@@ -359,53 +397,217 @@ html {
 }
 
 .team-role {
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin: 0;
 
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-align: center;
     color: var(--secondaty-text-color);
+    margin-bottom: 16px;
 }
 
 .team-picture {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
+
+.team-conteiner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+}
+
+.team-socials {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    /* outline: 1px solid red; */
+    margin-left: 32px;
+    margin-right: 32px;
+    /* посмотреть в записи центровку */
+}
+
+.team-item {
+    height: 44px;
+    width: 44px;
+}
+
+.team-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.team-icon {
+    fill: #AFB1B8;
+
+}
+
+.team-link:hover,
+.team-link:focus {
+    background-color: var(--accent-color);
+    fill: var(--hero-text-color);
+}
+
+.team-icon:hover,
+.team-icon:focus {
+    fill: var(--hero-text-color);
+    background-color: var(--accent-color);
+}
+
+.clients {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    /* outline: 1px solid red; */
+    margin-left: 32px;
+    margin-right: 32px;
+    /* посмотреть в записи центровку */
+}
+
+.cliets-list {
+    height: 92px;
+    width: 170px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.clients-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.clients-pic {
+    fill: #AFB1B8;
+
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    background: #2196F3;
+    fill: var(--hero-text-color);
+}
+
+/*.clients-pic:hover,
+.clients-pic:focus {
+     fill: var(--hero-text-color); */
+/* background-color: var; 
+}*/
 
 /* Footer */
 .footer {
+
+
     background-color: var(--secondary-bg-color);
 
     list-style-type: none;
-    margin: 0;
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
-.footer-text .adress {
-    color: var(--hero-text-color);
+.footer-box {
+    display: flex;
 }
 
 .footer-text {
     margin-bottom: 0;
 }
 
+.footer-text .adress {
+    color: var(--hero-text-color);
+}
+
 .footer-item {
-    margin-top: 0;
     margin-bottom: 9px;
+}
+
+.footer-link {
+    display: block;
 
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
 }
 
-.footer-item:hover,
-.footer-item:focus {
+.footer-item:last-child {
+    margin-bottom: 0px;
+}
+
+.footer-link:hover,
+.footer-link:focus {
     color: var(--accent-color);
+}
+
+.footer-adres-box {
+    margin-right: 70px;
+}
+
+/* footer social networks */
+
+.footer-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--hero-text-color);
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.footer-socials {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-socials-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-socials-item {
+    height: 44px;
+    width: 44px;
+}
+
+.footer-socials-icon {
+    fill: var(--hero-text-color);
+
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+    background-color: var(--accent-color);
+    fill: var(--hero-text-color);
 }
 
 
@@ -416,10 +618,6 @@ html {
 }
 
 /* Buttons */
-.box {
-    list-style-type: none;
-    /* outline: 2px solid red; */
-}
 
 .button {
     background-color: var(--accent-bg-color);
@@ -428,6 +626,7 @@ html {
     cursor: pointer;
     border-radius: 4px;
     border: none;
+    list-style-type: none;
 
     font-weight: 500;
     font-size: 16px;
@@ -439,19 +638,13 @@ html {
 
 .filtr-btn {
     text-align: center;
-
+    margin-bottom: 50px;
 }
 
-.box-button {
-    list-style-type: none;
-    /* delete later */
-    /* outline: 2px solid red; */
-}
 
 .button-list {
     display: inline-block;
     border-radius: 4px;
-    margin-bottom: 50px;
 }
 
 
@@ -472,14 +665,6 @@ html {
 }
 
 /* Projects */
-.box-projects {
-    /* delete later */
-    /* outline: 2px solid red; */
-}
-
-/* .works-pictures {
-    margin-bottom: 20px;
-} */
 
 .project-title {
     margin-top: 0;
@@ -489,11 +674,6 @@ html {
     line-height: 2;
     letter-spacing: 0.06em;
 }
-
-/* .project-title,
-.projects-desk {
-    border: 1px solid #EEEEEE;
-} */
 
 .projects-desk {
     margin-top: 0;
