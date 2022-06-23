@@ -181,33 +181,30 @@ html {
     color: var(--accent-color);
 }
 
-.site-nav .link,
-.site-cont .link {
+.site-nav .link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 }
 
-.header-mail {
+.header-contacts {
     display: flex;
     align-items: center;
-    text-align: center;
-    gap: 10px;
     cursor: pointer;
 }
 
-.header-icon:hover,
-.header-icon:focus {
+.header-contacts:hover .header-icon,
+.header-contacts:focus .header-icon {
     fill: var(--accent-color);
 }
 
-.header-tel {
+/* .header-tel {
     display: flex;
     align-items: center;
     text-align: center;
     gap: 10px;
     cursor: pointer;
-}
+} */
 
 /* .link-tel {
     display: flex;
@@ -217,6 +214,7 @@ html {
 
 .header-icon {
     margin-right: 10px;
+
 }
 
 /* Hero */
@@ -269,10 +267,7 @@ html {
     letter-spacing: 0.06em;
     color: var(--hero-text-color);
     cursor: pointer;
-
 }
-
-
 
 .btn:hover,
 .btn:focus {
@@ -280,9 +275,7 @@ html {
     background-color: var(--primary-bg-color);
 }
 
-
 /* Section */
-
 
 .section-title {
     margin-top: 0;
@@ -450,14 +443,15 @@ html {
 
 }
 
-.team-link:hover,
-.team-link:focus {
+.team-item:hover .team-link,
+.team-item:focus .team-link {
     background-color: var(--accent-color);
     fill: var(--hero-text-color);
 }
 
-.team-icon:hover,
-.team-icon:focus {
+
+.team-link:hover .team-icon,
+.team-link:focus .team-icon {
     fill: var(--hero-text-color);
     background-color: var(--accent-color);
 }
@@ -472,14 +466,11 @@ html {
     /* outline: 1px solid red; */
     margin-left: 32px;
     margin-right: 32px;
-    /* посмотреть в записи центровку */
 }
 
 .cliets-list {
     height: 92px;
     width: 170px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
 }
 
 .clients-link {
@@ -488,26 +479,24 @@ html {
     height: 100%;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
     cursor: pointer;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
 }
 
 .clients-pic {
     fill: #AFB1B8;
+}
 
+.clients-link:hover .clients-pic,
+.clients-link:focus .clients-pic {
+    fill: var(--accent-color);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-    background: #2196F3;
-    fill: var(--hero-text-color);
+    border-color: var(--accent-color);
 }
-
-/*.clients-pic:hover,
-.clients-pic:focus {
-     fill: var(--hero-text-color); */
-/* background-color: var; 
-}*/
 
 /* Footer */
 .footer {
