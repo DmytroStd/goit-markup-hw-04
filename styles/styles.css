@@ -34,7 +34,7 @@ html {
     margin: 0 auto;
 
     /* outline: 2px solid red; */
-    width: 1600px;
+    /* width: 1600px; */
 }
 
 /* button {
@@ -214,6 +214,7 @@ html {
 
 .header-icon {
     margin-right: 10px;
+    fill: var(--secondaty-text-color);
 
 }
 
@@ -409,6 +410,7 @@ html {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 0;
+    background-color: var(--primary-bg-color);
 }
 
 .team-socials {
@@ -436,22 +438,11 @@ html {
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-}
-
-.team-icon {
     fill: #AFB1B8;
-
 }
 
-.team-item:hover .team-link,
-.team-item:focus .team-link {
-    background-color: var(--accent-color);
-    fill: var(--hero-text-color);
-}
-
-
-.team-link:hover .team-icon,
-.team-link:focus .team-icon {
+.team-link:hover,
+.team-link:focus {
     fill: var(--hero-text-color);
     background-color: var(--accent-color);
 }
@@ -596,7 +587,6 @@ html {
 .footer-socials-link:hover,
 .footer-socials-link:focus {
     background-color: var(--accent-color);
-    fill: var(--hero-text-color);
 }
 
 
